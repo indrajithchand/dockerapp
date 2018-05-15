@@ -4,7 +4,7 @@ EXPOSE 80
 
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
-COPY DockerApp/DockerApp/DockerApp.csproj DockerApp/
+COPY DockerApp/DockerApp.csproj DockerApp/
 RUN dotnet restore DockerApp/DockerApp.csproj
 COPY . .
 WORKDIR /src/DockerApp
